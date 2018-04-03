@@ -55,7 +55,7 @@ function buytslick() {
 }
 
 function bdawgloop() {
-  setClicks(clicks + 1);
+  setClicks(clicks + clickval);
   setTimeout(bdawgloop,4000/(2**(bdawgs-1)));
 }
 
