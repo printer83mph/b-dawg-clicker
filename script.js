@@ -31,7 +31,7 @@ function buybdawg() {
     bdawgs++;
     document.body.style.backgroundImage = "url(media/bdbg.PNG)";
     document.body.style.backgroundSize = "" + (80 / bdawgs) + "px " + (80 / bdawgs) + "px";
-    bdprice *= 2;
+    bdprice = Math.floor(bdprice * 1.7);
     if (bdawgs == 1) {
       // first time setup
       document.getElementById("bdawg").src = "media/bdawg.png";
@@ -48,7 +48,7 @@ function buytslick() {
     document.body.style.backgroundImage = "url(media/tsbg.PNG)";
     document.body.style.backgroundSize = "" + (80 / bdawgs) + "px " + (80 / bdawgs) + "px";
     // mess with the page to make tslick do something
-    tsprice *= 2;
+    tsprice = Math.floor(tsprice * 1.8);
     if (tslicks == 1) {
       // first time setup
       document.getElementById("tslick").src = "media/tslick.png";
