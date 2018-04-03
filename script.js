@@ -44,7 +44,7 @@ function buybdawg() {
 function buytslick() {
   if (clicks >= tsprice) {
     setClicks(clicks - tsprice);
-    tslicks++;
+    bdawgs++;
     document.body.style.backgroundImage = "url(media/tsbg.PNG)";
     document.body.style.backgroundSize = "" + (80 / bdawgs) + "px " + (80 / bdawgs) + "px";
     clickval++;
