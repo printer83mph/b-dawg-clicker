@@ -1,4 +1,4 @@
-var clks, clicks, clickval, bball, bounce, bdawg, tslick, tawesome, bossmoney, bdprice, tsprice, taprice, bmprice, bdawgs, tslicks;
+var clks, clicks, clickval, bball, bounce, bdawg, tslick, tawesome, bossmoney, bdprice, tsprice, taprice, bmprice, bdawgs;
 
 window.onload = function() {
   clicks = 0;
@@ -14,7 +14,6 @@ window.onload = function() {
   taprice = 1000;
   bmprice = 50000;
   bdawgs = 0;
-  tslicks = 0;
 }
 
 function bclick() {
@@ -50,7 +49,7 @@ function buytslick() {
     clickval++;
     // mess with the page to make tslick do something
     tsprice += 75;
-    if (tslicks == 1) {
+    if (clickval == 2) {
       // first time setup
       document.getElementById("tslick").src = "media/tslick.png";
       // increase click value
