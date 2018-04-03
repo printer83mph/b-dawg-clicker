@@ -28,7 +28,7 @@ function bclick() {
 function buybdawg() {
   setClicks(clicks - bdprice);
   bdawgs++;
-  document.body.style.backgroundImage = "url(media/bdbg.png)";
+  document.body.style.backgroundImage = "url(media/bdbg.PNG)";
   document.body.style.backgroundSize = "" + (80 / bdawgs) + "px " + (80 / bdawgs) + "px";
   bdprice *= 2;
   if (bdawgs == 1) {
@@ -42,7 +42,7 @@ function buybdawg() {
 function buytslick() {
   setClicks(clicks - tsprice);
   tslicks++;
-  document.body.style.backgroundImage = "url(media/tsbg.png)";
+  document.body.style.backgroundImage = "url(media/tsbg.PNG)";
   document.body.style.backgroundSize = "" + (80 / bdawgs) + "px " + (80 / bdawgs) + "px";
   // mess with the page to make tslick do something
   tsprice *= 2;
