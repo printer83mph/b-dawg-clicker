@@ -6,7 +6,7 @@
   <title> B-Dawg Clicker </title>
   <script src="script.js"></script>
   <style>
-    html, body, div {
+    html, body, body > div {
       margin: 0;
       height: 100%;
     }
@@ -32,6 +32,8 @@
       transform-origin: center;
       animation-name: "clck";
       animation-duration: .3s;
+      -webkit-animation-name: "clck";
+      -webkit-animation-duration: .3s;
     }
     @keyframes clck {
       from {transform: scale(.9);}
@@ -42,6 +44,9 @@
   <div id="container">
     <p id="clks"> Get clicking! </p>
     <img src="media/bball.png" onclick="bclick()" id="bball"></img>
+    <div id="buyables">
+      <img>
+    </div>
   </div>
 </body>
 </html>
