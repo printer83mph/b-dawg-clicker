@@ -11,27 +11,31 @@
       margin: 0 auto;
       height: 100%;
       min-height: 100%;
-      background-color: black;
     }
     #clks {
       margin: 0 auto;
       padding: 20px 0;
     }
     #container {
-      background-color: black;
-      color: white;
       text-align: center;
+      position:sticky;
       height:100%;
     }
     #buyables {
       text-align: center;
       margin: 0 auto;
-      padding: 20px 0 0 0;
+      padding: 20px 0;
       width: 50%;
     }
     #buyables img {
-      display: block;
-      width: 100%;
+      display: inline;
+      width: 0;
+      box-shadow: 0 0 0 white;
+      transition: width 0.5s, transform 0.2s;
+    }
+    #buyables img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 5px white;
     }
     #bball {
       width: 100pt;
@@ -41,11 +45,21 @@
       -webkit-animation-name: "clck";
       -webkit-animation-duration: .3s;
     }
+    body {
+      background-size: 80px 80px;
+      animation-name: scrolling;
+      animation-duration: 4s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      background-image: none;
+      background-color: white;
+      font-family: sans-serif;
+      font-weight: bold;
+      text-shadow: 0 0 5px white;
+    }
     @media only screen and (min-width: 768px) {
-      body {
-        background-color: white;
-      }
       #container {
+        background-color: white;
         max-width: 700px;
         margin-left: auto;
         margin-right: auto;
@@ -57,13 +71,12 @@
       #buyables {
         padding: 50px 0;
       }
-      #buyables img {
-        display: inline;
-        width: 40%;
-      }
     }
     @keyframes clck {
-      from {transform: scale(.9);}
+      from {transform: scale(.9) rotate(10deg);}
+    }
+    @keyframes scrolling {
+      to {background-position: 80px 80px;}
     }
   </style>
 </head>
@@ -72,11 +85,9 @@
     <p id="clks"> Get clicking! </p>
     <img src="media/bball.png" onclick="bclick()" id="bball"></img>
     <div id="buyables">
-      <img src="media/unknown.png" id="bdawg">
-      <img src="media/unknown.png" id="tslick">
-      <img src="media/unknown.png" id="tawesome">
-      <img src="media/unknown.png" id="bossmoney">
+      <img src="media/unknown.png" id="bdawg" onclick="buybdawg()"><img src="media/unknown.png" id="tslick" onclick="buytslick()"><img src="media/unknown.png" id="tawesome"><img src="media/unknown.png" id="bossmoney">
     </div>
+    <p> EARLY ACCESS </p>
   </div>
 </body>
 </html>
