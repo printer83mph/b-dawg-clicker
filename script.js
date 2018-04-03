@@ -9,7 +9,7 @@ window.onload = function() {
 function bclick() {
   clicks++;
   clks.innerHTML = clicks;
-  bball.classList.remove("animate");
-  void bball.offsetWidth;
-  bball.classList.add("animate");
+  var newball = bball.cloneNode(true);
+  bball.parentNode.replaceChild(newball, bball);
+  bball = newball;
 }
