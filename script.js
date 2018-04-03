@@ -1,5 +1,5 @@
 var clicks = 0;
-var clks,bball;
+var clks, bball, bounce;
 
 window.onload = function() {
   clks = document.getElementById("clks");
@@ -12,4 +12,5 @@ function bclick() {
   var newball = bball.cloneNode(true);
   bball.parentNode.replaceChild(newball, bball);
   bball = newball;
+  (new Audio("audio/bounce.mp3")).play();
 }
