@@ -47,12 +47,12 @@ function buytslick() {
     tslicks++;
     document.body.style.backgroundImage = "url(media/tsbg.PNG)";
     document.body.style.backgroundSize = "" + (80 / bdawgs) + "px " + (80 / bdawgs) + "px";
+    clickval++;
     // mess with the page to make tslick do something
     tsprice += 75;
     if (tslicks == 1) {
       // first time setup
       document.getElementById("tslick").src = "media/tslick.png";
-      clickval++;
       // increase click value
     }
   }
