@@ -26,31 +26,35 @@ function bclick() {
 }
 
 function buybdawg() {
-  setClicks(clicks - bdprice);
-  bdawgs++;
-  document.body.style.backgroundImage = "url(media/bdbg.PNG)";
-  document.body.style.backgroundSize = "" + (80 / bdawgs) + "px " + (80 / bdawgs) + "px";
-  bdprice *= 2;
-  if (bdawgs == 1) {
-    // first time setup
-    document.getElementById("bdawg").src = "media/bdawg.png";
-    document.getElementById("container").style.boxShadow = "0 0 5px black";
-    setTimeout(bdawgloop, 4000);
+  if (clicks >= bdprice) {
+    setClicks(clicks - bdprice);
+    bdawgs++;
+    document.body.style.backgroundImage = "url(media/bdbg.PNG)";
+    document.body.style.backgroundSize = "" + (80 / bdawgs) + "px " + (80 / bdawgs) + "px";
+    bdprice *= 2;
+    if (bdawgs == 1) {
+      // first time setup
+      document.getElementById("bdawg").src = "media/bdawg.png";
+      document.getElementById("container").style.boxShadow = "0 0 5px black";
+      setTimeout(bdawgloop, 4000);
+    }
   }
 }
 
 function buytslick() {
-  setClicks(clicks - tsprice);
-  tslicks++;
-  document.body.style.backgroundImage = "url(media/tsbg.PNG)";
-  document.body.style.backgroundSize = "" + (80 / bdawgs) + "px " + (80 / bdawgs) + "px";
-  // mess with the page to make tslick do something
-  tsprice *= 2;
-  if (tslicks == 1) {
-    // first time setup
-    document.getElementById("tslick").src = "media/tslick.png";
-    clickval++;
-    // increase click value
+  if (clicks >= tsprice) {
+    setClicks(clicks - tsprice);
+    tslicks++;
+    document.body.style.backgroundImage = "url(media/tsbg.PNG)";
+    document.body.style.backgroundSize = "" + (80 / bdawgs) + "px " + (80 / bdawgs) + "px";
+    // mess with the page to make tslick do something
+    tsprice *= 2;
+    if (tslicks == 1) {
+      // first time setup
+      document.getElementById("tslick").src = "media/tslick.png";
+      clickval++;
+      // increase click value
+    }
   }
 }
 
