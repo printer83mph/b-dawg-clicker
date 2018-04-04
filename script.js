@@ -30,12 +30,12 @@ function buybdawg() {
     bdawgs++;
     document.body.style.backgroundImage = "url(media/bdbg.PNG)";
     document.body.style.backgroundSize = "" + (80 / bdawgs) + "px " + (80 / bdawgs) + "px";
-    bdprice *= 2;
+    bdprice += 25 + Math.floor(bdawgs/5)*25;
     if (bdawgs == 1) {
       // first time setup
       document.getElementById("bdawg").src = "media/bdawg.png";
       document.getElementById("container").style.boxShadow = "0 0 5px black";
-      setTimeout(bdawgloop, 4000);
+      setTimeout(bdawgloop, 1000);
     }
   }
 }
@@ -46,9 +46,9 @@ function buytslick() {
     bdawgs++;
     document.body.style.backgroundImage = "url(media/tsbg.PNG)";
     document.body.style.backgroundSize = "" + (80 / bdawgs) + "px " + (80 / bdawgs) + "px";
-    clickval++;
+    clickval += Math.round(clickval * 0.5);
     // mess with the page to make tslick do something
-    tsprice += 75;
+    tsprice = Math.floor(tsprice * 2);
     if (clickval == 2) {
       // first time setup
       document.getElementById("tslick").src = "media/tslick.png";
@@ -59,7 +59,7 @@ function buytslick() {
 
 function bdawgloop() {
   setClicks(clicks + clickval);
-  setTimeout(bdawgloop,4000/(2**(bdawgs-1)));
+  setTimeout(bdawgloop,1000/bdawgs);
 }
 
 function setClicks(n) {
